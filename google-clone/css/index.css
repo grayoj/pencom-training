@@ -1,0 +1,111 @@
+/* Intro to CSS
+
+In css we have things called selectors.
+
+what are selectors?
+.container {
+
+} = <element class="container">
+nav {
+
+} = <nav><nav>
+
+#sample {
+ = <element id="sample">
+} 
+*/
+/* For proper styling ethics
+ALAWAYS SET YOUR PADDING 
+AND MARGIN TO 0 WITHIN THE BODY TAG */
+body {
+  background-image: url("img/dots.pn");
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* 
+We have different measurement options
+px - pixels
+vh - viewport height
+rem- root element font size
+% - percentage
+*/
+header {
+  width: 100%;
+  height: 65px;
+}
+
+/* We can add a selector on
+the same line with another 
+so it becomes a child of the
+parent class
+*/
+
+header nav {
+  display: flex;
+  /* added this */
+  justify-content: flex-end;
+}
+
+header nav .right-section {
+  width: 250px;
+  display: flex;
+  height: auto;
+  /* added this */
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .right-section a {
+  margin-right: 10px;
+  color: #000000;
+}
+
+nav .right-section .menu-icon {
+  background-image: url("../img/dots.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+nav .right-section img {
+  border-radius: 70%;
+  height: 30px;
+  width: 35px;
+  margin-left: 10px;
+}
+
+main {
+  background-color: pink;
+  margin-top: 40px;
+  text-align: center;
+}
+
+main .main-logo {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+main .main-logo img {
+  width: 300px;
+}
+
+main .main-input {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
