@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Forms are used to store data. 
+    They are also used projects -->
+    <title>Forms in HTML</title>
+  </head>
+  <body>
+    <p>This is a form</p>
+    <!-- Just incase you ever decide to 
+    work with PHP, Ruby, or a Language that works with html files directly-->
+    <form action="" method="post">
+      <label>Username</label><br />
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your Username"
+        required="required"
+      /><br />
+      <label>Email Address</label><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your Email"
+        required="required"
+      /><br />
+
+      <label>Password</label><br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your Password"
+        required="required"
+      /><br />
+      <!-- The select tag creates a dropdown of options-->
+      <label>Select your account type</label><br />
+      <select>
+        <option>Premium</option>
+        <option>Gold</option>
+        <option>Silver</option>
+      </select>
+      <br />
+      <!-- Radio buttons -->
+      <input type="radio" name="gender" id="male" value="male" />
+      <label for="male">Male</label><br />
+
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">female</label><br />
+
+      <input type="radio" name="gender" id="none" value="none" />
+      <label for="none">I think I am a hemraphodite</label><br />
+
+      <!-- Checkboxes -->
+      <p>What means of transport do you prefer</p>
+      <input
+        type="checkbox"
+        id="vehicleone"
+        name="vehicleone"
+        value="Porsche"
+      />
+      <label for="vehicleone">I have a porsche</label>
+      <input
+        type="checkbox"
+        id="vehicletwo"
+        name="vehicletwo"
+        value="Powerbike"
+      />
+      <label for="vehicletwo">I have a powerbike</label>
+      <input
+        type="checkbox"
+        id="vehiclethree"
+        name="vehiclethree"
+        value="Yacht"
+      />
+      <label for="vehiclethree">I have a yacht</label><br />
+      <!-- Range inputs in html -->
+      <label for="salary">Choose your salary range:</label>
+      <input
+        type="range"
+        name="salary"
+        id="salary"
+        min="20000"
+        max="99999999999"
+        step="100"
+        value="25000"
+      />
+      <output class="output-price" for="salary"></output><br />
+      <!-- custom js to make it work and show output -->
+      <!-- <script>
+        const salary = document.querySelector("#salary");
+        const output = document.querySelector(".output-price");
+
+        output.textContent = salary.value;
+
+        salary.addEventListener("input", () => {
+          output.textContent = salary.value;
+        });
+      </script> -->
+
+      <!-- For Date -->
+      <input type="datetime-local" name="datetime" id="datetime-id" /><br />
+
+      <!-- For File Input -->
+      <input type="file" name="file" id="file-id" /><br />
+      <input type="submit" value="Sign Up" />
+    </form>
+  </body>
+</html>
