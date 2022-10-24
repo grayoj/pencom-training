@@ -1,0 +1,3 @@
+[submodule "penshop"]
+	path = penshop
+	url = https://github.com/grayoj/penshop
