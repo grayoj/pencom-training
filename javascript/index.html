@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <!-- Basically our introduction to JavaScript
+    Two ways of adding JavaScript.
+    Either externally from a .js file, or internally
+-->
+  <body>
+    <h1>This is my website in JavaScript</h1>
+    <!-- ID is preferably used to implement JavaScript methods -->
+    <p id="subtraction"></p>
+    <!-- The script tag will allow us to include JavaScript-->
+    <script>
+      // The document.write() injects html
+      document.write("<p>Hello world</p>");
+
+      // Display or output methods in JavaScript
+      /*
+      document.write()
+      innerHTML 
+      window.alert
+      console.log()
+      */
+      document.getElementById("subtraction").innerHTML = 10 + 5;
+
+      // The window alert method triggers the browser to open up a modal
+      // with information in it
+
+      window.alert("Hello world");
+
+      // console.log() is used to display content in the browser console
+      console.log("I like to code in C");
+    </script>
+  </body>
+</html>
