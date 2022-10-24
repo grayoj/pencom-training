@@ -24,7 +24,7 @@ const game = () => {
         // Here we just defined our buttons and options
         const rockButton = document.querySelector('.rock');
         const paperButton = document.querySelector('.paper');
-        const scissorsButton = document.querySelector('.scissors');
+        const scissorsButton = document.querySelector('.scissor');
         const playerOptions = [rockButton, paperButton, scissorsButton];
         const ComputerOptions = ['rock', 'paper', 'scissors'];
 
@@ -104,9 +104,40 @@ const game = () => {
     // Function when the game is over
     const gameOver = (playerOptions, movesLeft) => {
         const chooseMoves = document.querySelector('.move');
-        const result = document.querySelector
+        const result = document.querySelector('.result');
+        const reloadButton = document.querySelector('.reload');
+
+        playerOptions.forEach(option => {
+            option.style.display = 'none';
+        });
+
+        chooseMoves.innerText = 'Game is Over!!'
+        movesLeft.style.display = 'None!'
+
+        if (playerScore > computerScore) {
+            result.style.fontSize = '2rem';
+            result.innerText = 'You won the game!'
+            result.style.color = 'Black';
+        } else if (playerScore < computerScore) {
+            result.style.fontSize = '2rem';
+            result.innerText = 'You lost the game!'
+            result.style.color = 'red';
+        } else {
+            result.style.fontSize = '2rem';
+            result.innerText = 'tie'
+            result.style.color = 'gray';
+        }
+        reloadButton.innerText = 'Restart the Game';
+        reloadButton.style.display = 'flex';
+        reloadButton.addEventListener('click', () => {
+            window.location.reload();
+        })
     }
+
+    playGame();
 }
+game();
+
 
 
 
